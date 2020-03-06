@@ -47,12 +47,17 @@ module.exports= {
     },
     
     update: function(student_data,callback){
-        var sql = "update studentreg set semail=?, spass=?, sphone=? where sid=? ";
-        db.execute(sql, [student_data.email, student_data.password, student_data.SPhoneNumber,student_data.sid ], function(result){
-            if(result){
-                callback(ture);
+
+//  console.log(student_data);
+        var sql = "update studentreg set sname=?, sinstitution=?, spass=?, sphone=? where semail=?";
+        db.execute(sql, [student_data.fname, student_data.sname, student_data.password, student_data.SPhoneNumber, student_data.email], function(results){
+            if(results){
+                console.log(student_data);
+                callback(true);
+                // console.log('result goes');
             }
             else{
+                // console.log('results not entered');
                 callback(false);
             }
         });

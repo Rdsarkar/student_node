@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var home= require('./controllers/home');
 var login= require('./controllers/login');
 var reg= require('./controllers/reg');
+var logout=  require('./controllers/logout')
+var update=require('./controllers/update');
 
 var app = express();
 
@@ -22,12 +24,13 @@ app.use('/abc', express.static('assets'));
 app.use('/login',login);
 app.use('/reg',reg);
 app.use('/home',home);
-
+app.use('/logout',logout);
+app.use('/update',update);
 
 
 //routes
 app.get('/', function(req, res){
-	res.render('login/login');
+	res.render('index');
 });
 
 

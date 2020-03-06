@@ -24,6 +24,18 @@ router.get('/',function(req,res){
 		});
 	});
 
+
+	//logout
+	router.get('/', function(req, res){	
+		if(req.cookies['username'] != null){
+			userModel.getByUname(req.cookies['username'], function(result){
+				res.render('home/index', {user: result});
+			});
+		}else{
+			res.redirect('/logout');
+		}
+	});
+
 // router.post('/', function(req, res){
 
 	
