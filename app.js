@@ -12,9 +12,10 @@ var reg= require('./controllers/reg');
 var logout=  require('./controllers/logout');
 var update=require('./controllers/update');
 var enroll_course=require('./controllers/enroll_course');
-// var view_course=require('./controllers/view_course');
+var view_course=require('./controllers/view_course');
 // var notes=require('./controllers/notes');
 // var notice=require('./controllers/notice');
+
 
 
 
@@ -38,9 +39,10 @@ app.use('/home',home);
 app.use('/logout',logout);
 app.use('/update',update);
 app.use('/enroll_course',enroll_course);
-// app.use('/view_course',view_course);
+app.use('/view_course',view_course);
 // app.use('/notes',notes);
 // app.use('/notice',notice);
+
 
 
 //routes

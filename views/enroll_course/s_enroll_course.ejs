@@ -87,10 +87,6 @@
                                 </div>
                                 
                                
-										
-										
-
-
                                 <div class="form-group">
                                     <label for="SelectBatch" class="font-weight-bold">Batch</label>
                                     <select class="form-control" name="batch">
@@ -106,7 +102,7 @@
 
                                 <div class="form-group">
                                     <label for="SelectBatch" class="font-weight-bold">Subject</label>
-                                    <select class="form-control" name="batch">
+                                    <select class="form-control" name="subject">
                                         <% for(var i=0; i < results.length; i++){%>
                                         
                                             <option> <%=results[i].subject%></option>
@@ -117,7 +113,7 @@
 
                                 <div class="form-group">
                                     <label for="SelectBatch" class="font-weight-bold">Payment</label>
-                                    <select class="form-control" name="batch">
+                                    <select class="form-control" name="payment">
                                         <% for(var i=0; i < results.length; i++){%>
                                         
                                             <option> <%=results[i].payment%></option>
@@ -148,14 +144,7 @@
                                 
                                 </div>
                               
-                                
-                                
-
-
-
-
-
-                                <button type="submit" name="submit" class="btn btn-warning mt-3" >Confirm </button>
+                                <input type="submit" name="submit" value="Submit" class="btn btn-success" id="submit">
                             </form> 
                         </div>
                     </div>

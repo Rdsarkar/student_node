@@ -51,7 +51,6 @@ module.exports= {
         var sql = "update studentreg set sname=?, sinstitution=?, spass=?, sphone=? where semail=?";
         db.execute(sql, [student_data.fname, student_data.sname, student_data.password, student_data.SPhoneNumber, student_data.email], function(results){
             if(results){
-                console.log(student_data);
                 callback(true);
             }
             else{ 
@@ -83,8 +82,49 @@ module.exports= {
     },
 
 
-    
 
+    enrolling:function(enrolling,callback){
+
+        var sql="insert into courses values (?,?,?,?,?,?,?,?)";
+            db.execute(sql,[null,enrolling.course_type, enrolling.batch, enrolling.subject, enrolling.payment, enrolling.time, enrolling.day, enrolling.email],function(status){
+                if(status){
+
+                    console.log(enrolling);
+                    callback(true);
+                }
+                else{
+                    console.log('not going');
+                    callback(false);
+                }
+
+            })
+
+
+
+
+
+
+    },
+
+
+    courseInfo:function(email, callback){
+        var sql = "select * from courses where semail= ?";
+	    db.getResults(sql, [email],function(results){
+		if(results){
+			callback(results);
+			console.log(results);
+			console.log('dada nai');
+		   
+		}
+		else{
+			callback([]);
+
+		}
+	});
+
+
+    
+    },
 	
 	
 }

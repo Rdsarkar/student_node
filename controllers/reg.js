@@ -29,8 +29,6 @@ router.post('/',function(req, res){
     userModel.studentInsert(student_data,function(status){
         if(status){
             res.redirect('/login');
-            //res.send('You are Succlly Registrated');
-            
         }
 
         else

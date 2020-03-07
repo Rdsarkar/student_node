@@ -20,9 +20,6 @@
                 </div>
                 <ul>
                     <li>
-                        <h5>Rajdeep</h5>
-                    </li>
-                    <li>
                         <a href="" class="btn-primary"><i class="fas fa-bell"></i></a>
                     </li>
                     <li>
@@ -85,57 +82,29 @@
                                                 <th scope="col">Course Type</th>
                                                 <th scope="col">Batch</th>
                                                 <th scope="col">Class Day</th>
-                                                <th scope="col">Class Time</th>
+                                                <th scope="col">Class Duration</th>
                                                 <th scope="col">Course Teacher</th>
-                                                <th scope="col">Teacher review</th>
+                                                <th scope="col">Class Day</th>
                                               </tr>
                                             </thead>
                                             <tbody>
+                                                <% for(var i=0; i < results.length; i++){%>
                                               <tr>
-                                                <th scope="row">1</th>
-                                                <td>Regular</td>
-                                                <td>HSC</td>
-                                                <td>@mdo</td>
-                                                <td>3:30</td>
-                                                <td>Alamin</td>
-                                                <td><a href="s_review.html">Review </a></td>
+                                                
+                                        
+                                                    <td> <%=results[i].cid%></td>
+                                                    <td> <%=results[i].ctype%></td>
+                                                    <td> <%=results[i].batch%></td>
+                                                    <td> <%=results[i].subject%></td>
+                                                    <td> <%=results[i].fees%></td>
+                                                    <td> <%=results[i].classtime%></td>
+                                                    <td> <%=results[i].classday%></td>
+
+
+                                                    <% }%>
+                                                <!-- <td><a href="s_review.html">Review </a></td> -->
                                               </tr>
-                                              <tr>
-                                                <th scope="row">2</th>
-                                                <td>Model Test</td>
-                                                <td>HSC</td>
-                                                <td>@fat</td>
-                                                <td>4:50</td>
-                                                <td>Alamin</td>
-                                                <td><a href="s_review.html">Review </a></td>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">3</th>
-                                                <td>Test</td>
-                                                <td>HSC</td>
-                                                <td>@twitter</td>
-                                                <td>2:40</td>
-                                                <td>Alamin</td>
-                                                <td><a href="s_review.html">Review </a></td>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">4</th>
-                                                <td>Regular</td>
-                                                <td>HSC</td>
-                                                <td>Sun</td>
-                                                <td>1:00</td>
-                                                <td>Alamin</td>
-                                                <td><a href="s_review.html">Review </a></td>
-                                              </tr>
-                                              <tr>
-                                                <th scope="row">5</th>
-                                                <td>Ragular</td>
-                                                <td>HSC</td>
-                                                <td>Sun</td>
-                                                <td>4:00</td>
-                                                <td>Alamin</td>
-                                                <td><a href="s_review.html">Review </a></td>
-                                              </tr>
+                                              
                                             </tbody>
                                           </table>
                                    
