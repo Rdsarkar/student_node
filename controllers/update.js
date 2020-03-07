@@ -38,22 +38,4 @@ router.post('/',function(req,res){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = router;

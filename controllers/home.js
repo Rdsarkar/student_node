@@ -6,7 +6,7 @@ var userModel	= require.main.require('./models/user-model');
 
 router.get('*', function(req, res, next){
 	if(req.cookies['email'] == null){
-		res.redirect('/login');
+		res.redirect('/logout');
 	}else{
 		next();
 	}
