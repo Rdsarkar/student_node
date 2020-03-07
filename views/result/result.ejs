@@ -20,9 +20,6 @@
                 </div>
                 <ul>
                     <li>
-                        <h5>Rajdeep</h5>
-                    </li>
-                    <li>
                         <a href="" class="btn-primary"><i class="fas fa-bell"></i></a>
                     </li>
                     <li>
@@ -45,7 +42,7 @@
                             <i class="fas fa-users"></i> <a href="/enroll_course">Enroll Course</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="/view_course">View Course</a>
+                            <i class="fas fa-users"></i> <a href="/view_course" >View Course</a>
                         </li>
                         <li>
                             <i class="fas fa-users"></i> <a href="/notes">Notes Download</a>
@@ -54,10 +51,10 @@
                             <i class="fas fa-users"></i> <a href="/notice">View Notice</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="/result">Check Results</a>
+                            <i class="fas fa-users"></i> <a href="/result" class="ad-active">Check Results</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="/msg" class="ad-active">Send Message</a>
+                            <i class="fas fa-users"></i> <a href="/msg">Send Message</a>
                         </li>
                         <li>
                             <i class="fas fa-users"></i> <a href="s_payment.html">Payment</a>
@@ -74,16 +71,39 @@
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
-                            <h1 class="mt-5">Send Message</h1>
-                            <form action="" method="POST">
-                                <div class="form-group">                
-                                    <input type="text" name="msg">
-
-                                    <input type="submit" name="submit" id="submit" class="btn btn-warning">
-                                  </div>
-
-
-                        </form>
+                            <h1 class="mt-5">Check Result</h1>
+                            <div class="container">
+                                <div class="row text-center  justify-content-center mr-lg-4">
+                                    
+                                        <table class="table table-striped">
+                                            <thead>
+                                              <tr class="table-col">
+                                                <th scope="col">Result ID</th>
+                                                <th scope="col">Exam Name</th>
+                                                <th scope="col">Exam Type</th>
+                                                <th scope="col">Marks</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for(var j=0; j < results.length; j++){%>
+                                              <tr>
+                                                
+                                        
+                                                    <td> <%=results[j].rid%></td>
+                                                    <td> <%=results[j].examname%></td>
+                                                    <td> <%=results[j].examtype%></td>
+                                                    <td> <%=results[j].marks%></td>
+                                                    
+                                                    <% }%>
+                                                <!-- <td><a href="s_review.html">Review </a></td> -->
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                   
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -142,6 +142,23 @@ module.exports= {
 
     },
 
+    resultInfo:function(email, callback){
+        var sql = "select * from results where semail= ?";
+	    db.getResults(sql, [email],function(results){
+		if(results){
+            console.log('this is success');
+			callback(results);
+			console.log(results);		   
+		}
+		else{
+            console.log('this is not success');
+			callback([]);
+
+		}
+	});
+
+    },
+
     insert_msg:function(msgr,callback){
 
         var sql="insert into msg values (?,?,?)";
@@ -173,6 +190,8 @@ module.exports= {
 		});
 	},
 
+
+    
 
 
 	
