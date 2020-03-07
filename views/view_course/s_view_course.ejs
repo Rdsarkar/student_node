@@ -54,7 +54,7 @@
                             <i class="fas fa-users"></i> <a href="s_check_results.html">Check Results</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="s_msg_send.html">Send Message</a>
+                            <i class="fas fa-users"></i> <a href="/msg">Send Message</a>
                         </li>
                         <li>
                             <i class="fas fa-users"></i> <a href="s_payment.html">Payment</a>
@@ -74,7 +74,7 @@
                             <h1 class="mt-5">View Courses</h1>
                             <div class="container">
                                 <div class="row text-center  justify-content-center mr-lg-4">
-                                    
+                                    <form method="POST">
                                         <table class="table table-striped">
                                             <thead>
                                               <tr class="table-col">
@@ -87,6 +87,8 @@
                                                 <th scope="col">Class Day</th>
                                               </tr>
                                             </thead>
+
+                                          
                                             <tbody>
                                                 <% for(var i=0; i < results.length; i++){%>
                                               <tr>
@@ -101,12 +103,14 @@
                                                     <td> <%=results[i].classday%></td>
 
 
-                                                    <% }%>
-                                                <!-- <td><a href="s_review.html">Review </a></td> -->
+                                                   
+                                                <td><a href="view_course/delete/<%=results[i].cid%>">DETETE </a></td>
                                               </tr>
+                                              <% }%>
                                             </tbody>
+                                            
                                           </table>
-                                   
+                                         
                                         </form>
                                     </div>
                                 </div>

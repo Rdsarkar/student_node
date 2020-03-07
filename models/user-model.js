@@ -113,8 +113,7 @@ module.exports= {
 		if(results){
 			callback(results);
 			console.log(results);
-			console.log('dada nai');
-		   
+			
 		}
 		else{
 			callback([]);
@@ -133,9 +132,7 @@ module.exports= {
 	    db.getResults(sql, [email],function(results){
 		if(results){
 			callback(results);
-			console.log(results);
-			console.log('dada nai');
-		   
+			console.log(results);		   
 		}
 		else{
 			callback([]);
@@ -143,12 +140,7 @@ module.exports= {
 		}
 	});
 
-
-    
     },
-
-
-
 
     insert_msg:function(msgr,callback){
 
@@ -167,39 +159,19 @@ module.exports= {
             })
 
 
-
-
-
-
     },
 
-
-
-    
-    
-
-    // getBycId: function(cid,callback){
-    //     var sql="select * from courses where cid=?";
-    //     db.getResults(sql,[cid], function(result){
-    //         if(results.length =! 0){
-    //             callback(results[0]);
-    //         }else{
-    //             callback(null);
-    //         }
-    //     })
-    // },
-
-    // delete: function(cid, callback){
-	// 	var sql = "delete from courses where cid=?";
-	// 	db.execute(sql, [null], function(status){
-	// 		if(status){
-	// 			callback(true);
-	// 		}else{
-	// 			callback(false);
-	// 		}
-	// 	});
-    // },
-    
+    courseDelete: function(id, callback){
+		var sql = "delete from courses where cid=?";
+		db.execute(sql, [id.id], function(status){
+			if(status){
+				callback(true);
+			}else{
+                console.log('hoi nai');
+				callback(false);
+			}
+		});
+	},
 
 
 
