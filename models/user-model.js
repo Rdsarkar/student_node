@@ -125,6 +125,83 @@ module.exports= {
 
     
     },
-	
+
+
+
+    noticeInfo:function(email, callback){
+        var sql = "select * from notice where semail= ?";
+	    db.getResults(sql, [email],function(results){
+		if(results){
+			callback(results);
+			console.log(results);
+			console.log('dada nai');
+		   
+		}
+		else{
+			callback([]);
+
+		}
+	});
+
+
+    
+    },
+
+
+
+
+    insert_msg:function(msgr,callback){
+
+        var sql="insert into msg values (?,?,?)";
+            db.execute(sql,[null,msgr.msg,msgr.email],function(status){
+                if(status){
+
+                    console.log(msgr);
+                    callback(true);
+                }
+                else{
+                    console.log('not going');
+                    callback(false);
+                }
+
+            })
+
+
+
+
+
+
+    },
+
+
+
+    
+    
+
+    // getBycId: function(cid,callback){
+    //     var sql="select * from courses where cid=?";
+    //     db.getResults(sql,[cid], function(result){
+    //         if(results.length =! 0){
+    //             callback(results[0]);
+    //         }else{
+    //             callback(null);
+    //         }
+    //     })
+    // },
+
+    // delete: function(cid, callback){
+	// 	var sql = "delete from courses where cid=?";
+	// 	db.execute(sql, [null], function(status){
+	// 		if(status){
+	// 			callback(true);
+	// 		}else{
+	// 			callback(false);
+	// 		}
+	// 	});
+    // },
+    
+
+
+
 	
 }

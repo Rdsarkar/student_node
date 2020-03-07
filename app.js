@@ -13,6 +13,9 @@ var logout=  require('./controllers/logout');
 var update=require('./controllers/update');
 var enroll_course=require('./controllers/enroll_course');
 var view_course=require('./controllers/view_course');
+var notice=require('./controllers/notice');
+var msg=require('./controllers/msg');
+// var c_delete=require('./controllers/c_delete');
 // var notes=require('./controllers/notes');
 // var notice=require('./controllers/notice');
 
@@ -40,6 +43,9 @@ app.use('/logout',logout);
 app.use('/update',update);
 app.use('/enroll_course',enroll_course);
 app.use('/view_course',view_course);
+app.use('/notice',notice);
+app.use('/msg',msg);
+// app.use('/c_delete',c_delete);
 // app.use('/notes',notes);
 // app.use('/notice',notice);
 

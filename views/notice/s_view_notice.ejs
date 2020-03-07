@@ -20,9 +20,6 @@
                 </div>
                 <ul>
                     <li>
-                        <h5>Rajdeep</h5>
-                    </li>
-                    <li>
                         <a href="" class="btn-primary"><i class="fas fa-bell"></i></a>
                     </li>
                     <li>
@@ -45,19 +42,19 @@
                             <i class="fas fa-users"></i> <a href="/enroll_course">Enroll Course</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="/view_course">View Course</a>
+                            <i class="fas fa-users"></i> <a href="/view_course" >View Course</a>
                         </li>
                         <li>
                             <i class="fas fa-users"></i> <a href="/notes">Notes Download</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="/notice"class="ad-active">View Notice</a>
+                            <i class="fas fa-users"></i> <a href="/notice" class="ad-active">View Notice</a>
                         </li>
                         <li>
                             <i class="fas fa-users"></i> <a href="s_check_results.html">Check Results</a>
                         </li>
                         <li>
-                            <i class="fas fa-users"></i> <a href="s_msg_send.html">Send Message</a>
+                            <i class="fas fa-users"></i> <a href="/msg">Send Message</a>
                         </li>
                         <li>
                             <i class="fas fa-users"></i> <a href="s_payment.html">Payment</a>
@@ -74,48 +71,39 @@
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="col-lg-6">
-                            <h1 class="mt-5">Personal Info</h1>
-                            <form action="" method="POST">
+                            <h1 class="mt-5">View Courses</h1>
+                            <div class="container">
                                 <div class="row text-center  justify-content-center mr-lg-4">
                                     
-                                    <table class="table table-striped">
-                                        <thead>
-                                          <tr class="table-col">
-                                            <th scope="col">Couse ID</th>
-                                            <th scope="col">Course Teacher</th>
-                                            <th scope="col">Course Name</th>
-                                            <th scope="col">Notice</th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <th scope="row">1</th>
-                                            <td>Alamin</td>
-                                            <td>Regular</td>
-                                            <td><a href="ss_notice.html">View Notice </a></td>
-                                          </tr>
-                                          
-                                          <tr>
-                                            <th scope="row">2</th>
-                                            <td>MD.Alamin</td>
-                                            <td>Regular</td>
-                                            <td><a href="ss_notice.html">View Notice  </a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">3</th>
-                                            <td>MD.Alamin</td>
-                                            <td>Regular</td>
-                                            <td><a href="ss_notice.html">View Notice  </a></td>
-                                          </tr>
-                                          <tr>
-                                            <th scope="row">4</th>
-                                            <td>Alamin</td>
-                                            <td>Regular</td>
-                                            <td><a href="ss_notice.html">View Notice  </a></td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                            </form>
+                                        <table class="table table-striped">
+                                            <thead>
+                                              <tr class="table-col">
+                                                <th scope="col">Notice ID</th>
+                                                <th scope="col">Topic</th>
+                                                <th scope="col">Details</th>
+                                                <th scope="col">Date</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for(var i=0; i < results.length; i++){%>
+                                              <tr>
+                                                
+                                        
+                                                    <td> <%=results[i].noticeid%></td>
+                                                    <td> <%=results[i].topic%></td>
+                                                    <td> <%=results[i].details%></td>
+                                                    <td> <%=results[i].date%></td>
+                                                    
+                                                    <% }%>
+                                                <!-- <td><a href="s_review.html">Review </a></td> -->
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                   
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

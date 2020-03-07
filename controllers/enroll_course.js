@@ -2,9 +2,6 @@ var express =require('express');
 var router = express.Router();
 var userModel	= require.main.require('./models/user-model');
 
-// var datetime = new Date();
-//     console.log(datetime);
-
 
 router.get('*', function(req, res, next){
 	if(req.cookies['email'] == null){
