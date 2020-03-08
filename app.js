@@ -16,9 +16,8 @@ var view_course=require('./controllers/view_course');
 var notice=require('./controllers/notice');
 var msg=require('./controllers/msg');
 var result=require('./controllers/result');
-// var c_delete=require('./controllers/c_delete');
 // var notes=require('./controllers/notes');
-// var notice=require('./controllers/notice');
+
 
 
 
@@ -47,9 +46,8 @@ app.use('/view_course',view_course);
 app.use('/notice',notice);
 app.use('/msg',msg);
 app.use('/result',result);
-// app.use('/c_delete',c_delete);
 // app.use('/notes',notes);
-// app.use('/notice',notice);
+
 
 
 

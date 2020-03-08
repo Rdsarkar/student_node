@@ -3,7 +3,13 @@ var router = express.Router();
 var userModel	= require.main.require('./models/user-model');
 
 router.get('/',function(req,res){
-    res.render('update/s_edit.ejs');
+    if(req.cookies['email'] != null){
+        res.render('update/s_edit.ejs');
+    }else{
+        res.redirect('/logout');    
+    }
+    
+    
 });
 
 router.post('/',function(req,res){
