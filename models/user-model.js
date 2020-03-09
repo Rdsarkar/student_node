@@ -100,16 +100,12 @@ module.exports= {
             })
 
 
-
-
-
-
     },
 
 
     courseInfo:function(email, callback){
         var sql = "select * from courses where semail= ?";
-	    db.getResults(sql, [email],function(results){
+	    db.getResults(sql,[email],function(results){
 		if(results){
 			callback(results);
 			console.log(results);
@@ -129,7 +125,7 @@ module.exports= {
 
     noticeInfo:function(email, callback){
         var sql = "select * from notice where semail= ?";
-	    db.getResults(sql, [email],function(results){
+	    db.getResults(sql,[email],function(results){
 		if(results){
 			callback(results);
 			console.log(results);		   
@@ -144,7 +140,7 @@ module.exports= {
 
     resultInfo:function(email, callback){
         var sql = "select * from results where semail= ?";
-	    db.getResults(sql, [email],function(results){
+	    db.getResults(sql,[email],function(results){
 		if(results){
             console.log('this is success');
 			callback(results);
@@ -169,12 +165,11 @@ module.exports= {
                     callback(true);
                 }
                 else{
-                    console.log('not going');
+                    
                     callback(false);
                 }
 
             })
-
 
     },
 
@@ -191,7 +186,24 @@ module.exports= {
 	},
 
 
-    
+    insert_review:function(review,callback){
+
+        var sql="insert into review values (?,?,?)";
+            db.execute(sql,[null,review.review,review.email],function(status){
+                if(status){
+
+                    console.log(review);
+                    callback(true);
+                }
+                else{
+                    console.log('not going');
+                    callback(false);
+                }
+
+            })
+
+
+    },
 
 
 	
