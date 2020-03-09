@@ -16,6 +16,7 @@ var view_course=require('./controllers/view_course');
 var notice=require('./controllers/notice');
 var msg=require('./controllers/msg');
 var result=require('./controllers/result');
+var review=require('./controllers/review');
 // var notes=require('./controllers/notes');
 
 
@@ -46,6 +47,7 @@ app.use('/view_course',view_course);
 app.use('/notice',notice);
 app.use('/msg',msg);
 app.use('/result',result);
+app.use('/review',review);
 // app.use('/notes',notes);
 
 
